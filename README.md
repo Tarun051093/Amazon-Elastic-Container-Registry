@@ -17,6 +17,11 @@ Run the following command to authenticate Docker with your ECR repository:
 
 aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.<region>.amazonaws.com
 
+Replace:
+
+<region>: Your AWS region (e.g., us-east-1).
+<aws_account_id>: Your AWS account ID.
+
 
 ## 3. Tag the Image
 Tag the Docker image for your ECR repository:
