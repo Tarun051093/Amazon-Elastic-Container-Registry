@@ -7,7 +7,7 @@ Pushing a Docker image to Amazon Elastic Container Registry (ECR) involves sever
 - **Docker Installed**: Make sure Docker is installed and running on your local machine.
 - **ECR Repository**: Have an existing ECR repository, or create one.
 
-# Steps to Push a Docker Image to Amazon ECR
+
 
 # Steps to Push a Docker Image to Amazon ECR
 
@@ -19,8 +19,8 @@ aws ecr get-login-password --region <region> | docker login --username AWS --pas
 
 Replace:
 
-region: Your AWS region  (e.g., us-east-1).
-aws_account_id: Your AWS account ID.
+region: Your AWS region  (e.g., us-east-1).  
+aws_account_id: Your AWS account ID.  
 
 
 ## 3. Tag the Image
