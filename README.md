@@ -43,3 +43,10 @@ Push the image to the ECR repository:
 
 
 docker push <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repository_name>:<tag>
+
+
+## 5. Verify the Image in ECR
+Log in to the AWS Management Console, navigate to the ECR service, and confirm the image is in your repository.
+
+
+This Markdown format is clean and easy to use for documentation purposes. Let me know if you need any further adjustments!
