@@ -22,9 +22,24 @@ Replace:
 region: Your AWS region  (e.g., us-east-1).  
 aws_account_id: Your AWS account ID.  
 
+## 2. Build Your Docker Image
+Navigate to the directory containing your `Dockerfile` and build the image:
+
+
+docker build -t <image_name>:<tag> .
+
+
+
 
 ## 3. Tag the Image
 Tag the Docker image for your ECR repository:
 
 
 docker tag <image_name>:<tag> <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repository_name>:<tag>
+
+## 4. Push the Image to ECR
+Push the image to the ECR repository:
+
+
+
+docker push <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repository_name>:<tag>
