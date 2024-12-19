@@ -7,4 +7,25 @@ Pushing a Docker image to Amazon Elastic Container Registry (ECR) involves sever
 - **Docker Installed**: Make sure Docker is installed and running on your local machine.
 - **ECR Repository**: Have an existing ECR repository, or create one.
 
-1\. Authenticate Docker to ECRRun the following command to authenticate Docker with your ECR repository:bashCopy codeaws ecr get-login-password --region | docker login --username AWS --password-stdin .dkr.ecr..amazonaws.comReplace:: Your AWS region (e.g., us-east-1).: Your AWS account ID.2. Build Your Docker ImageNavigate to the directory containing your Dockerfile and build the image:bashCopy codedocker build -t : .Example:bashCopy codedocker build -t my-app:latest .3. Tag the ImageTag the Docker image for your ECR repository:bashCopy codedocker tag : .dkr.ecr..amazonaws.com/:Example:bashCopy codedocker tag my-app:latest 123456789012.dkr.ecr.us-east-1.amazonaws.com/my-repo:latest4. Push the Image to ECRPush the image to the ECR repository:bashCopy codedocker push .dkr.ecr..amazonaws.com/:Example:bashCopy codedocker push 123456789012.dkr.ecr.us-east-1.amazonaws.com/my-repo:latest5. Verify the Image in ECRLog in to the AWS Management Console, navigate to the ECR service, and confirm the image is in your repository.
+# Steps to Push a Docker Image to Amazon ECR
+
+## 1. Authenticate Docker to ECR
+Run the following command to authenticate Docker with your ECR repository:  
+```bash
+aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.<region>.amazonaws.com
+
+Replace:
+
+<region>: Your AWS region (e.g., us-east-1).
+<aws_account_id>: Your AWS account ID.
+## 2. Build Your Docker Image
+Navigate to the directory containing your Dockerfile and build the image:
+
+bash
+Copy code
+docker build -t <image_name>:<tag> .
+Example:
+
+bash
+Copy code
+docker build -t my-app:latest .
