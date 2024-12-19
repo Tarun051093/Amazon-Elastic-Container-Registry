@@ -19,8 +19,8 @@ aws ecr get-login-password --region <region> | docker login --username AWS --pas
 
 Replace:
 
-<region>: Your AWS region (e.g., us-east-1).
-<aws_account_id>: Your AWS account ID.
+###<region>: Your AWS region (e.g., us-east-1).
+###<aws_account_id>: Your AWS account ID.
 
 
 ## 3. Tag the Image
