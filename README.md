@@ -1,7 +1,7 @@
 # Elastic Container Registry
 Pushing a Docker image to Amazon Elastic Container Registry (ECR) involves several steps. Here’s how you can do it:
 
-Prerequisites:
+**Prerequisites:**
 AWS CLI Installed: Ensure the AWS CLI is installed and configured with the appropriate credentials.
 Docker Installed: Make sure Docker is installed and running on your local machine.
 ECR Repository: Have an existing ECR repository, or create one.
